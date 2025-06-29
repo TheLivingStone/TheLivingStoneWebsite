@@ -1,228 +1,131 @@
 # The Living Stone Foundation Website
 
-A modern, responsive website for The Living Stone Foundation - an innovative AI ecosystem builder delivering custom AI solutions and fostering the next generation of AI startups.
+A modern, responsive website for The Living Stone Foundation - an AI solutions company specializing in intelligent automation, custom LLMs, and AI agent development.
 
-## 🚀 Overview
+## 🚀 Features
 
-The Living Stone Foundation serves as a parent company and startup incubator, pioneering the future of artificial intelligence through our subsidiaries and strategic partnerships. Our primary subsidiary, Living Stone Solutions, delivers tailored AI solutions including custom LLMs, intelligent automation, and AI agent development for businesses.
-
-## 🌟 Features
-
-### **Core Pages**
-- **Homepage** - Hero section with company overview and service highlights
-- **About** - Company mission, vision, and leadership team
-- **Services** - Detailed service offerings and technology stack
-- **Solutions** - Industry-specific solutions with case studies
-- **Contact** - Contact form with company information and FAQ
-
-### **Design Highlights**
-- **Responsive Design** - Mobile-first approach with seamless desktop experience
-- **Modern UI/UX** - Clean, professional design with smooth animations
-- **Interactive Elements** - Tab-based solutions showcase, form validation
-- **Performance Optimized** - Fast loading times and optimized assets
-- **Accessibility** - ARIA labels, keyboard navigation, semantic HTML
-
-### **Technical Features**
-- **Flask Backend** - Python-based server with contact form processing
-- **Database Integration** - SQLite database with user models
-- **Email Handling** - Contact form submissions with email notifications
-- **Cross-browser Compatibility** - Works across all modern browsers
-- **SEO Optimized** - Meta tags, structured data, semantic markup
-
-## 🛠️ Technology Stack
-
-### **Frontend**
-- **HTML5** - Semantic markup and accessibility
-- **CSS3** - Modern styling with Flexbox and Grid
-- **JavaScript (ES6+)** - Interactive functionality and animations
-- **Font Awesome** - Icon library for UI elements
-- **Google Fonts** - Inter and Playfair Display typography
-
-### **Backend**
-- **Python 3.x** - Core programming language
-- **Flask** - Web framework for routing and templating
-- **SQLAlchemy** - Database ORM for user management
-- **Flask-CORS** - Cross-origin resource sharing support
-
-### **Database**
-- **SQLite** - Lightweight database for development
-- **User Models** - Contact form submissions and user data
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Modern UI/UX**: Clean, professional design with smooth animations
+- **Form Integration**: Contact and career application forms powered by Formspree
+- **SEO Optimized**: Proper meta tags, semantic HTML structure
+- **Fast Loading**: Optimized images and efficient CSS/JS
+- **Accessibility**: WCAG compliant with proper ARIA labels
 
 ## 📁 Project Structure
 
-```
-living-stone-foundation-website/
-├── src/
-│   ├── models/
-│   │   └── user.py              # Database models
-│   └── routes/
-│       ├── user.py              # User-related routes
-│       └── contact.py           # Contact form handling
-├── static/
-│   ├── assets/
-│   │   └── images/              # Logo and visual assets
-│   ├── index.html               # Homepage
-│   ├── about.html               # About page
-│   ├── services.html            # Services page
-│   ├── solutions.html           # Solutions page
-│   ├── contact.html             # Contact page
-│   ├── styles.css               # Main stylesheet
-│   └── script.js                # JavaScript functionality
-├── database/
-│   └── app.db                   # SQLite database
-├── logs/
-│   └── contact_submissions.log  # Contact form logs
-├── main.py                      # Flask application entry point
-└── README.md                    # Project documentation
-```
+living-stone-website/
+├── index.html                          # Homepage
+├── about.html                          # About Us page
+├── services.html                       # Services page
+├── blog.html                          # Blog page
+├── careers.html                       # Careers page
+├── contact-formspree.html             # Contact form (Formspree)
+├── careers-application-formspree.html # Career application form
+├── thank-you.html                     # Thank you page
+├── styles.css                         # Main stylesheet
+├── script.js                          # JavaScript functionality
+├── CNAME                              # Custom domain configuration
+├── README.md                          # This file
+└── assets/
+└── images/                        # All website images
+├── Living_Stone_LOGO_with_Name-removebg-preview.png
+├── LivingStoneFoundationLOGONoBackground.png
+├── Zapier.png
+├── sendgrid.jpg
+├── chainlink-logo-png_seeklogo-396866.png
+├── AlchemyLogo.jpg
+├── TwilioLogo.png
+├── InfuraLogo.png
+├── n8nLogo.png
+└── [other company logos...]
 
-## 🚀 Getting Started
+## 🛠️ Setup Instructions
 
-### **Prerequisites**
-- Python 3.7 or higher
-- pip (Python package manager)
-- Modern web browser
+### 1. Create Project Structure
+1. Create a new folder for your website project
+2. Create the `assets/images/` subfolder
+3. Add all the HTML, CSS, and JS files to the root directory
+4. Place all logo images in the `assets/images/` folder
 
-### **Installation**
+### 2. Configure Forms (Formspree)
+The website uses Formspree for form handling:
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/your-username/living-stone-foundation-website.git
-   cd living-stone-foundation-website
-   ```
+- **Contact Form**: `https://formspree.io/f/xgvydwbb`
+- **Career Application**: `https://formspree.io/f/xrbkjzwb`
 
-2. **Create virtual environment**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
+After deployment, configure redirect URLs in your Formspree dashboard:
+- Redirect URL: `https://thelivingstonefoundation.com/thank-you.html`
 
-3. **Install dependencies**
-   ```bash
-   pip install flask flask-cors flask-sqlalchemy
-   ```
+### 3. Deploy to GitHub Pages
+1. Create a new GitHub repository
+2. Upload all files to the repository
+3. Go to Settings > Pages
+4. Select "Deploy from a branch" and choose your main branch
+5. The CNAME file will automatically configure your custom domain
 
-4. **Initialize database**
-   ```bash
-   python main.py
-   ```
+### 4. Configure Custom Domain DNS
+Add these DNS records at your domain registrar:
 
-5. **Run the application**
-   ```bash
-   python main.py
-   ```
+**A Records (for thelivingstonefoundation.com ):**
+- Host: @ or thelivingstonefoundation.com
+- Points to: 
+  - 185.199.108.153
+  - 185.199.109.153
+  - 185.199.110.153
+  - 185.199.111.153
 
-6. **Access the website**
-   - Open your browser and navigate to `http://localhost:5000`
+**CNAME Record (for www.thelivingstonefoundation.com):**
+- Host: www
+- Points to: yourusername.github.io
 
-## 📋 Usage
+### 5. Enable HTTPS
+After DNS propagation, go to your GitHub repository Settings > Pages and check "Enforce HTTPS".
 
-### **Development Mode**
-The application runs in debug mode by default, enabling:
-- Hot reload for code changes
-- Detailed error messages
-- Flask development server
+## 📝 Content Management
 
-### **Contact Form**
-- Form submissions are logged to `logs/contact_submissions.log`
-- Email notifications can be configured in `src/routes/contact.py`
-- Form validation includes required field checking and email format validation
+### Adding New Blog Posts
+Edit `blog.html` and add new blog cards following the existing structure.
 
-### **Database Management**
-- User data is stored in SQLite database
-- Database models are defined in `src/models/user.py`
-- Database is automatically created on first run
+### Updating Job Listings
+Edit `careers.html` to add, remove, or modify job postings.
+
+### Modifying Services
+Update `services.html` to add new services or modify existing ones.
 
 ## 🎨 Customization
 
-### **Styling**
-- Main styles are in `static/styles.css`
-- Color scheme uses purple gradient (`#667eea` to `#764ba2`)
-- Typography: Inter (body) and Playfair Display (headings)
-- Responsive breakpoints: 768px (tablet) and 480px (mobile)
+### Colors
+The main brand colors are defined in CSS:
+- Primary: #667eea
+- Secondary: #764ba2
+- Text: #1f2937, #4b5563
 
-### **Content Updates**
-- Update company information in HTML files
-- Modify service offerings in `services.html`
-- Update contact details in `contact.html`
-- Add new case studies in `solutions.html`
+### Fonts
+The website uses the Inter font family from Google Fonts.
 
-### **Adding Pages**
-1. Create new HTML file in `static/` directory
-2. Add navigation links in header section
-3. Update footer links if needed
-4. Add corresponding routes in Flask if dynamic content needed
+### Images
+All images should be optimized for web (WebP format recommended) and placed in `assets/images/`.
 
 ## 📱 Responsive Design
 
-The website is fully responsive with breakpoints:
-- **Desktop** (1200px+): Full grid layouts and side-by-side content
-- **Tablet** (768px-1199px): Reduced columns and adjusted spacing
-- **Mobile** (below 768px): Single column layout and mobile navigation
+The website is fully responsive with breakpoints at:
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
 
-## 🔒 Security Features
+## 🔧 Browser Support
 
-- **CSRF Protection** - Secret key configuration
-- **Input Validation** - Form data sanitization
-- **SQL Injection Prevention** - SQLAlchemy ORM usage
-- **Cross-Origin Requests** - CORS configuration
-
-## 🚀 Deployment
-
-### **Production Checklist**
-- [ ] Update `SECRET_KEY` with secure random value
-- [ ] Configure production database (PostgreSQL recommended)
-- [ ] Set up email service for contact form notifications
-- [ ] Enable HTTPS/SSL certificates
-- [ ] Configure domain and DNS settings
-- [ ] Set up monitoring and logging
-- [ ] Optimize images and assets
-- [ ] Enable gzip compression
-
-### **Deployment Options**
-- **Heroku** - Easy deployment with git integration
-- **AWS EC2** - Full control over server environment
-- **DigitalOcean** - Affordable VPS hosting
-- **Netlify** (static hosting) - For frontend-only deployment
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-feature`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/new-feature`)
-5. Create a Pull Request
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
 ## 📞 Support
 
-For technical support or questions:
-- **Email**: info@thelivingstonefoundation.com
-- **Phone**: +1 (540) 998-9766
-- **Location**: Washington, DC
+For technical support or questions about the website, contact:
+- Email: info@thelivingstonefoundation.com
+- Phone: +1 (540) 998-9766
 
 ## 📄 License
 
-This project is proprietary and confidential. All rights reserved by The Living Stone Foundation.
-
-## 🔄 Version History
-
-- **v1.0.0** - Initial website launch with core pages and functionality
-- **v1.1.0** - Added contact form processing and database integration
-- **v1.2.0** - Enhanced responsive design and accessibility features
-
-## 📈 Future Enhancements
-
-- [ ] Blog/News section for AI insights and company updates
-- [ ] Customer portal for project tracking
-- [ ] Interactive AI demos and calculators
-- [ ] Multi-language support
-- [ ] Advanced analytics and performance monitoring
-- [ ] Content management system (CMS) integration
-- [ ] API documentation portal
-- [ ] Career portal with job applications
-
----
-
-**The Living Stone Foundation** - Transforming businesses through innovative AI solutions and fostering the next generation of AI startups.
-
-*Last updated: January 2025*
+© 2025 The Living Stone Foundation. All rights reserved.
