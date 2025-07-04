@@ -40,309 +40,268 @@
         <section class="main-content">
             <div class="container">
                 <div class="application-intro">
-                    <h2>Apply for a Position</h2>
-                    <p>We're always looking for talented individuals who share our passion for AI innovation. Please fill out the application form below, and we'll get back to you as soon as possible.</p>
-                    
-                    <div class="application-note">
-                        <p><strong>Note:</strong> Due to Formspree's free tier limitations, file uploads (resume, cover letter, etc. ) are not supported in this form. Please include links to your resume, portfolio, or relevant documents in the appropriate text fields, or mention that you can provide them via email upon request.</p>
+                    <h2>Apply to The Living Stone Foundation</h2>
+                    <p>We're looking for passionate individuals who want to make a difference in the world of AI. Please fill out the application form below and we'll get back to you soon.</p>
+                </div>
+
+                <form class="application-form" action="https://formspree.io/f/xrbkjzwb" method="POST" enctype="multipart/form-data">
+                    <!-- Personal Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Personal Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea id="address" name="address" rows="3" placeholder="Street address, city, state, zip code"></textarea>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="linkedIn">LinkedIn Profile</label>
+                                <input type="url" id="linkedIn" name="linkedIn" placeholder="https://linkedin.com/in/yourprofile">
+                            </div>
+                            <div class="form-group">
+                                <label for="portfolio">Portfolio/Website</label>
+                                <input type="url" id="portfolio" name="portfolio" placeholder="https://yourportfolio.com">
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="form-container">
-                    <form action="https://formspree.io/f/xrbkjzwb" method="POST" class="application-form">
-                        <!-- Personal Information -->
-                        <div class="form-section">
-                            <h3>Personal Information</h3>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="first_name">First Name *</label>
-                                    <input type="text" id="first_name" name="first_name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="last_name">Last Name *</label>
-                                    <input type="text" id="last_name" name="last_name" required>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email Address *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number *</label>
-                                    <input type="tel" id="phone" name="phone" required>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="address">Address</label>
-                                    <input type="text" id="address" name="address" placeholder="Street Address">
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="city">City</label>
-                                    <input type="text" id="city" name="city">
-                                </div>
-                                <div class="form-group">
-                                    <label for="state">State/Province</label>
-                                    <input type="text" id="state" name="state">
-                                </div>
-                                <div class="form-group">
-                                    <label for="zip_code">ZIP/Postal Code</label>
-                                    <input type="text" id="zip_code" name="zip_code">
-                                </div>
-                            </div>
-
+                    <!-- Position Information -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-briefcase"></i> Position Information</h3>
+                        
+                        <div class="form-row">
                             <div class="form-group">
-                                <label for="country">Country</label>
-                                <select id="country" name="country">
-                                    <option value="">Select Country</option>
-                                    <option value="United States">United States</option>
-                                    <option value="Canada">Canada</option>
-                                    <option value="United Kingdom">United Kingdom</option>
-                                    <option value="Germany">Germany</option>
-                                    <option value="France">France</option>
-                                    <option value="Australia">Australia</option>
-                                    <option value="Other">Other</option>
+                                <label for="position">Position Applied For *</label>
+                                <select id="position" name="position" required>
+                                    <option value="">Select a position</option>
+                                    <option value="senior-ai-research-scientist">Senior AI Research Scientist</option>
+                                    <option value="machine-learning-engineer">Machine Learning Engineer</option>
+                                    <option value="ai-solutions-architect">AI Solutions Architect</option>
+                                    <option value="full-stack-developer">Full-Stack Developer (AI Focus)</option>
+                                    <option value="data-scientist">Data Scientist</option>
+                                    <option value="ai-ethics-researcher">AI Ethics Researcher</option>
+                                    <option value="other">Other (specify in cover letter)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="workType">Preferred Work Type *</label>
+                                <select id="workType" name="workType" required>
+                                    <option value="">Select work type</option>
+                                    <option value="full-time">Full-time</option>
+                                    <option value="part-time">Part-time</option>
+                                    <option value="contract">Contract</option>
+                                    <option value="internship">Internship</option>
                                 </select>
                             </div>
                         </div>
 
-                        <!-- Position Information -->
-                        <div class="form-section">
-                            <h3>Position Information</h3>
-                            
+                        <div class="form-row">
                             <div class="form-group">
-                                <label for="position_applied">Position Applied For *</label>
-                                <select id="position_applied" name="position_applied" required>
-                                    <option value="">Select Position</option>
-                                    <option value="Senior AI Research Scientist">Senior AI Research Scientist</option>
-                                    <option value="Machine Learning Engineer">Machine Learning Engineer</option>
-                                    <option value="AI Solutions Architect">AI Solutions Architect</option>
-                                    <option value="Full-Stack Developer (AI Focus )">Full-Stack Developer (AI Focus)</option>
-                                    <option value="Data Scientist">Data Scientist</option>
-                                    <option value="AI Ethics Researcher">AI Ethics Researcher</option>
-                                    <option value="Other">Other (please specify in cover letter)</option>
-                                </select>
+                                <label for="startDate">Available Start Date</label>
+                                <input type="date" id="startDate" name="startDate">
                             </div>
-
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="salary_expectation">Salary Expectation</label>
-                                    <select id="salary_expectation" name="salary_expectation">
-                                        <option value="">Select Range</option>
-                                        <option value="$80k - $100k">$80k - $100k</option>
-                                        <option value="$100k - $120k">$100k - $120k</option>
-                                        <option value="$120k - $150k">$120k - $150k</option>
-                                        <option value="$150k - $180k">$150k - $180k</option>
-                                        <option value="$180k - $200k">$180k - $200k</option>
-                                        <option value="$200k+">$200k+</option>
-                                        <option value="Negotiable">Negotiable</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="start_date">Available Start Date</label>
-                                    <input type="date" id="start_date" name="start_date">
-                                </div>
-                            </div>
-
                             <div class="form-group">
-                                <label for="work_authorization">Work Authorization Status *</label>
-                                <select id="work_authorization" name="work_authorization" required>
-                                    <option value="">Select Status</option>
-                                    <option value="US Citizen">US Citizen</option>
-                                    <option value="Permanent Resident">Permanent Resident</option>
-                                    <option value="H1-B Visa">H1-B Visa</option>
-                                    <option value="F-1 OPT">F-1 OPT</option>
-                                    <option value="Other Visa">Other Visa</option>
-                                    <option value="Require Sponsorship">Require Sponsorship</option>
-                                </select>
+                                <label for="salaryExpectation">Salary Expectation</label>
+                                <input type="text" id="salaryExpectation" name="salaryExpectation" placeholder="e.g., $120,000 - $150,000">
                             </div>
                         </div>
 
-                        <!-- Professional Experience -->
-                        <div class="form-section">
-                            <h3>Professional Experience</h3>
-                            
-                            <div class="form-group">
-                                <label for="years_experience">Years of Relevant Experience *</label>
-                                <select id="years_experience" name="years_experience" required>
-                                    <option value="">Select Experience</option>
-                                    <option value="0-1 years">0-1 years</option>
-                                    <option value="2-3 years">2-3 years</option>
-                                    <option value="4-5 years">4-5 years</option>
-                                    <option value="6-8 years">6-8 years</option>
-                                    <option value="9-12 years">9-12 years</option>
-                                    <option value="13+ years">13+ years</option>
-                                </select>
-                            </div>
+                        <div class="form-group">
+                            <label for="workLocation">Preferred Work Location *</label>
+                            <select id="workLocation" name="workLocation" required>
+                                <option value="">Select location preference</option>
+                                <option value="washington-dc">Washington, DC (On-site)</option>
+                                <option value="hybrid">Hybrid (DC area)</option>
+                                <option value="remote">Remote</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
 
-                            <div class="form-group">
-                                <label for="current_position">Current Position/Title</label>
-                                <input type="text" id="current_position" name="current_position">
-                            </div>
+                    <!-- Experience & Education -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-graduation-cap"></i> Experience & Education</h3>
+                        
+                        <div class="form-group">
+                            <label for="education">Education *</label>
+                            <textarea id="education" name="education" rows="4" placeholder="Degree(s), institution(s), graduation year(s), relevant coursework..." required></textarea>
+                        </div>
 
-                            <div class="form-group">
-                                <label for="current_company">Current Company</label>
-                                <input type="text" id="current_company" name="current_company">
-                            </div>
+                        <div class="form-group">
+                            <label for="experience">Work Experience *</label>
+                            <textarea id="experience" name="experience" rows="6" placeholder="Previous positions, companies, dates, key responsibilities and achievements..." required></textarea>
+                        </div>
 
+                        <div class="form-group">
+                            <label for="skills">Technical Skills *</label>
+                            <textarea id="skills" name="skills" rows="4" placeholder="Programming languages, frameworks, tools, technologies..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="projects">Relevant Projects</label>
+                            <textarea id="projects" name="projects" rows="4" placeholder="AI/ML projects, research, publications, open source contributions..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Documents -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-file-upload"></i> Documents</h3>
+                        
+                        <div class="form-row">
                             <div class="form-group">
-                                <label for="work_experience">Work Experience Summary *</label>
-                                <textarea id="work_experience" name="work_experience" rows="6" placeholder="Please provide a brief summary of your relevant work experience, including key achievements and responsibilities..." required></textarea>
+                                <label for="resume">Resume/CV *</label>
+                                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+                                <small>PDF, DOC, or DOCX format (max 5MB)</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="coverLetter">Cover Letter</label>
+                                <input type="file" id="coverLetter" name="coverLetter" accept=".pdf,.doc,.docx">
+                                <small>PDF, DOC, or DOCX format (max 5MB)</small>
                             </div>
                         </div>
 
-                        <!-- Education -->
-                        <div class="form-section">
-                            <h3>Education</h3>
-                            
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="highest_degree">Highest Degree *</label>
-                                    <select id="highest_degree" name="highest_degree" required>
-                                        <option value="">Select Degree</option>
-                                        <option value="High School">High School</option>
-                                        <option value="Associate's">Associate's</option>
-                                        <option value="Bachelor's">Bachelor's</option>
-                                        <option value="Master's">Master's</option>
-                                        <option value="PhD">PhD</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="field_of_study">Field of Study</label>
-                                    <input type="text" id="field_of_study" name="field_of_study" placeholder="e.g., Computer Science, AI/ML, etc.">
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="additionalDocs">Additional Documents</label>
+                            <input type="file" id="additionalDocs" name="additionalDocs" accept=".pdf,.doc,.docx" multiple>
+                            <small>Portfolio, transcripts, certifications, etc. (max 5MB each)</small>
+                        </div>
+                    </div>
 
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="university">University/Institution</label>
-                                    <input type="text" id="university" name="university">
-                                </div>
-                                <div class="form-group">
-                                    <label for="graduation_year">Graduation Year</label>
-                                    <input type="number" id="graduation_year" name="graduation_year" min="1950" max="2030">
-                                </div>
+                    <!-- Cover Letter Text -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-edit"></i> Cover Letter</h3>
+                        
+                        <div class="form-group">
+                            <label for="coverLetterText">Why do you want to work at The Living Stone Foundation? *</label>
+                            <textarea id="coverLetterText" name="coverLetterText" rows="6" placeholder="Tell us about your passion for AI, what excites you about our mission, and how you can contribute to our team..." required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="motivation">What motivates you in your AI/tech career?</label>
+                            <textarea id="motivation" name="motivation" rows="4" placeholder="Share your career goals, interests, and what drives your passion for technology..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- References -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-users"></i> References</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="ref1Name">Reference 1 - Name</label>
+                                <input type="text" id="ref1Name" name="ref1Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="ref1Title">Reference 1 - Title</label>
+                                <input type="text" id="ref1Title" name="ref1Title">
                             </div>
                         </div>
 
-                        <!-- Skills & Technical Expertise -->
-                        <div class="form-section">
-                            <h3>Skills & Technical Expertise</h3>
-                            
+                        <div class="form-row">
                             <div class="form-group">
-                                <label for="technical_skills">Technical Skills *</label>
-                                <textarea id="technical_skills" name="technical_skills" rows="4" placeholder="List your technical skills, programming languages, frameworks, tools, etc. (e.g., Python, TensorFlow, PyTorch, AWS, etc.)" required></textarea>
+                                <label for="ref1Email">Reference 1 - Email</label>
+                                <input type="email" id="ref1Email" name="ref1Email">
                             </div>
-
                             <div class="form-group">
-                                <label for="ai_ml_experience">AI/ML Experience</label>
-                                <textarea id="ai_ml_experience" name="ai_ml_experience" rows="4" placeholder="Describe your experience with AI/ML technologies, projects, research, etc."></textarea>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="certifications">Certifications</label>
-                                <textarea id="certifications" name="certifications" rows="3" placeholder="List any relevant certifications (e.g., AWS, Google Cloud, Microsoft Azure, etc.)"></textarea>
+                                <label for="ref1Phone">Reference 1 - Phone</label>
+                                <input type="tel" id="ref1Phone" name="ref1Phone">
                             </div>
                         </div>
 
-                        <!-- Documents & Links -->
-                        <div class="form-section">
-                            <h3>Resume & Portfolio</h3>
-                            
+                        <div class="form-row">
                             <div class="form-group">
-                                <label for="resume_link">Resume/CV Link *</label>
-                                <input type="url" id="resume_link" name="resume_link" placeholder="https://drive.google.com/... or https://linkedin.com/in/..." required>
-                                <small>Please provide a link to your resume (Google Drive, Dropbox, LinkedIn, personal website, etc. )</small>
+                                <label for="ref2Name">Reference 2 - Name</label>
+                                <input type="text" id="ref2Name" name="ref2Name">
                             </div>
-
                             <div class="form-group">
-                                <label for="portfolio_link">Portfolio/GitHub Link</label>
-                                <input type="url" id="portfolio_link" name="portfolio_link" placeholder="https://github.com/... or https://portfolio.com/...">
-                                <small>Link to your portfolio, GitHub profile, or relevant projects</small>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="linkedin_profile">LinkedIn Profile</label>
-                                <input type="url" id="linkedin_profile" name="linkedin_profile" placeholder="https://linkedin.com/in/...">
+                                <label for="ref2Title">Reference 2 - Title</label>
+                                <input type="text" id="ref2Title" name="ref2Title">
                             </div>
                         </div>
 
-                        <!-- Cover Letter -->
-                        <div class="form-section">
-                            <h3>Cover Letter</h3>
-                            
+                        <div class="form-row">
                             <div class="form-group">
-                                <label for="cover_letter">Cover Letter *</label>
-                                <textarea id="cover_letter" name="cover_letter" rows="8" placeholder="Tell us why you're interested in this position and how your skills and experience make you a great fit for our team..." required></textarea>
+                                <label for="ref2Email">Reference 2 - Email</label>
+                                <input type="email" id="ref2Email" name="ref2Email">
                             </div>
-
                             <div class="form-group">
-                                <label for="why_living_stone">Why The Living Stone Foundation?</label>
-                                <textarea id="why_living_stone" name="why_living_stone" rows="4" placeholder="What interests you about our company and mission?"></textarea>
+                                <label for="ref2Phone">Reference 2 - Phone</label>
+                                <input type="tel" id="ref2Phone" name="ref2Phone">
                             </div>
                         </div>
+                    </div>
 
-                        <!-- References -->
-                        <div class="form-section">
-                            <h3>References</h3>
-                            
-                            <div class="form-group">
-                                <label for="references">Professional References</label>
-                                <textarea id="references" name="references" rows="6" placeholder="Please provide 2-3 professional references with their name, title, company, email, and phone number."></textarea>
-                            </div>
+                    <!-- Legal & Consent -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-shield-alt"></i> Legal & Consent</h3>
+                        
+                        <div class="form-group">
+                            <label for="workAuthorization">Work Authorization *</label>
+                            <select id="workAuthorization" name="workAuthorization" required>
+                                <option value="">Select authorization status</option>
+                                <option value="us-citizen">US Citizen</option>
+                                <option value="permanent-resident">Permanent Resident</option>
+                                <option value="work-visa">Work Visa (H1B, etc.)</option>
+                                <option value="need-sponsorship">Need Sponsorship</option>
+                                <option value="other">Other</option>
+                            </select>
                         </div>
 
-                        <!-- Additional Information -->
-                        <div class="form-section">
-                            <h3>Additional Information</h3>
-                            
-                            <div class="form-group">
-                                <label for="how_did_you_hear">How did you hear about this position?</label>
-                                <select id="how_did_you_hear" name="how_did_you_hear">
-                                    <option value="">Select an option</option>
-                                    <option value="Company Website">Company Website</option>
-                                    <option value="LinkedIn">LinkedIn</option>
-                                    <option value="Job Board">Job Board</option>
-                                    <option value="Referral">Referral</option>
-                                    <option value="Conference/Event">Conference/Event</option>
-                                    <option value="Social Media">Social Media</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="additional_info">Additional Information</label>
-                                <textarea id="additional_info" name="additional_info" rows="4" placeholder="Any additional information you'd like to share..."></textarea>
-                            </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="backgroundCheck" value="yes" required>
+                                I consent to a background check if offered a position *
+                            </label>
                         </div>
 
-                        <div class="form-section">
-                            <div class="form-group">
-                                <label>
-                                    <input type="checkbox" name="terms_agreement" required>
-                                    I confirm that the information provided is accurate and complete. I understand that any false information may result in disqualification from consideration. *
-                                </label>
-                            </div>
-
-                            <div class="form-group">
-                                <label>
-                                    <input type="checkbox" name="privacy_consent">
-                                    I consent to the processing of my personal data for recruitment purposes.
-                                </label>
-                            </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="dataConsent" value="yes" required>
+                                I consent to the processing of my personal data for recruitment purposes *
+                            </label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">Submit Application</button>
-                    </form>
-                </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="truthfulness" value="yes" required>
+                                I certify that all information provided is true and complete *
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Hidden fields for Formspree -->
+                    <input type="hidden" name="_next" value="https://thelivingstonefoundation.com/thank-you.html">
+                    <input type="hidden" name="_subject" value="New Career Application Submission">
+
+                    <div class="application-note">
+                        <p><strong>Note:</strong> By submitting this application, you agree to our privacy policy and terms of service. We will review your application and contact you within 1-2 weeks if your qualifications match our current openings.</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit Application</button>
+                </form>
             </div>
         </section>
     </main>
@@ -355,7 +314,7 @@
                     <p>Driving innovation with custom AI agents, intelligent automation, and personalized LLM solutions for a smarter future.</p>
                     <div class="contact-info">
                         <p><i class="fas fa-envelope"></i> info@thelivingstonefoundation.com</p>
-                        <p><i class="fas fa-phone"></i> +1 (540 ) 998-9766</p>
+                        <p><i class="fas fa-phone"></i> +1 (540) 998-9766</p>
                         <p><i class="fas fa-map-marker-alt"></i> Washington, DC</p>
                     </div>
                     <div class="social-links">
@@ -405,3 +364,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
