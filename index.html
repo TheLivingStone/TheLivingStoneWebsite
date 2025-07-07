@@ -3,163 +3,699 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Living Stone Foundation - Intelligent AI Solutions</title>
+    <title>The Living Stone Foundation - AI Solutions & Innovation</title>
+    <meta name="description" content="The Living Stone Foundation delivers custom AI solutions, intelligent automation, and AI agent development for businesses seeking transformative technology.">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo-link">
-                    <img src="assets/images/Living_Stone_LOGO_with_Name-removebg-preview.png" alt="Living Stone Foundation Logo" class="header-logo">
-                </a>
-                <div class="hamburger-menu">
-                    <i class="fas fa-bars"></i>
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="assets/images/Living_Stone_LOGO_with_Name-removebg-preview.png" alt="The Living Stone Foundation" class="logo">
                 </div>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="careers.html" class="nav-link">Careers</a></li>
-                    <li><a href="contact-formspree.html" class="nav-link btn btn-primary">Schedule Consultation</a></li>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="solutions.html" class="nav-link">Solutions</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="careers.html" class="nav-link">Careers</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
-            </nav>
-        </div>
+                <div class="nav-cta">
+                    <a href="contact.html" class="btn btn-primary">Schedule Consultation</a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <section class="hero-section">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-text">
-                        <h1>Intelligent AI Solutions for a Smarter Future</h1>
-                        <p>We build custom AI agents, intelligent automation, and personalized LLM solutions to transform your business operations and drive innovation.</p>
-                        <div class="hero-buttons">
-                            <a href="services.html" class="btn btn-primary">Get Started Today</a>
-                            <a href="about.html" class="btn btn-secondary">Learn More</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Transform Your Business with 
+                    <span class="gradient-text">Intelligent AI Solutions</span>
+                </h1>
+                <p class="hero-subtitle">
+                    The Living Stone Foundation delivers custom AI agents, intelligent automation, 
+                    and personalized LLM solutions that drive efficiency, reduce costs, and unlock new possibilities for your business.
+                </p>
+                <div class="hero-cta">
+                    <a href="contact.html" class="btn btn-primary btn-large">Get Started Today</a>
+                    <a href="about.html" class="btn btn-secondary btn-large">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">AI Models Deployed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">Average Cost Reduction</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-logo-container">
+                    <img src="assets/images/LivingStoneFoundationLOGONoBackground.png" alt="The Living Stone Foundation Logo" class="hero-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Logos Carousel -->
+    <section class="company-logos">
+        <div class="container">
+            <h2 class="section-title">Powered By</h2>
+            <p class="section-subtitle">Join thousands of companies worldwide who trust our platform to power their business growth</p>
+            <div class="logos-container">
+                <div class="logos-track">
+                    <!-- First set of logos -->
+                    <div class="logo-item">
+                        <img src="https://zapier.com/favicon.ico" alt="Zapier" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.twilio.com/content/dam/twilio-com/global/en/icons/icon-twilio-red.svg" alt="Twilio" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://sendgrid.com/wp-content/themes/sgdotcom/pages/resource/brand/2016/SendGrid-Logomark.png" alt="SendGrid" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://stripe.com/img/v3/home/twitter.png" alt="Stripe" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format" alt="Figma" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://n8n.io/n8n-logo-icon.svg" alt="n8n" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://d0.awsstatic.com/logos/powered-by-aws.png" alt="AWS" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://docs.alchemy.com/img/logo-light.svg" alt="Alchemy" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://infura.io/favicon.ico" alt="Infura" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://chain.link/assets/images/open-graph-protocol.png" alt="Chainlink" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://slack.com/favicon.ico" alt="Slack" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.notion.so/images/favicon.ico" alt="Notion" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://airtable.com/images/favicon/baymax/favicon-32x32.png" alt="Airtable" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://vercel.com/favicon.ico" alt="Vercel" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.netlify.com/favicon.ico" alt="Netlify" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.salesforce.com/favicon.ico" alt="Salesforce" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.hubspot.com/favicon.ico" alt="HubSpot" />
+                    </div>
+                    
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="logo-item">
+                        <img src="https://zapier.com/favicon.ico" alt="Zapier" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.twilio.com/content/dam/twilio-com/global/en/icons/icon-twilio-red.svg" alt="Twilio" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://sendgrid.com/wp-content/themes/sgdotcom/pages/resource/brand/2016/SendGrid-Logomark.png" alt="SendGrid" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://stripe.com/img/v3/home/twitter.png" alt="Stripe" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format" alt="Figma" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://n8n.io/n8n-logo-icon.svg" alt="n8n" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://d0.awsstatic.com/logos/powered-by-aws.png" alt="AWS" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://docs.alchemy.com/img/logo-light.svg" alt="Alchemy" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://infura.io/favicon.ico" alt="Infura" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://chain.link/assets/images/open-graph-protocol.png" alt="Chainlink" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://slack.com/favicon.ico" alt="Slack" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.notion.so/images/favicon.ico" alt="Notion" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://airtable.com/images/favicon/baymax/favicon-32x32.png" alt="Airtable" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.mongodb.com/assets/images/global/favicon.ico" alt="MongoDB" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://vercel.com/favicon.ico" alt="Vercel" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.netlify.com/favicon.ico" alt="Netlify" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.salesforce.com/favicon.ico" alt="Salesforce" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.hubspot.com/favicon.ico" alt="HubSpot" />
+                    </div>
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://sendgrid.com/wp-content/themes/sgdotcom/pages/resource/brand/2016/SendGrid-Logomark.png" alt="SendGrid" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://stripe.com/img/v3/home/twitter.png" alt="Stripe" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://www.docker.com/wp-content/uploads/2022/03/Moby-logo.png" alt="Docker" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://cdn.sanity.io/images/599r6htc/localized/46a76c802176eb17b04e12108de7e7e0f3736dc6-1024x1024.png?w=804&h=804&q=75&fit=max&auto=format" alt="Figma" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://n8n.io/n8n-logo-icon.svg" alt="n8n" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://d0.awsstatic.com/logos/powered-by-aws.png" alt="AWS" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://docs.alchemy.com/img/logo-light.svg" alt="Alchemy" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://infura.io/favicon.ico" alt="Infura" />
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://chain.link/assets/images/open-graph-protocol.png" alt="Chainlink" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About The Living Stone Foundation</h2>
+                <p class="section-subtitle">
+                    We are an innovative AI ecosystem builder, pioneering the future of artificial intelligence through our subsidiaries and startup incubator program.
+                </p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Parent Company</h3>
+                        <p>The Living Stone Foundation serves as a parent company and startup incubator, fostering innovation in the AI space while delivering direct solutions through our subsidiaries.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Living Stone Solutions</h3>
+                        <p>Our primary subsidiary focuses on delivering tailored AI solutions including custom LLMs, intelligent automation, and AI agent development for businesses.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Innovation Hub</h3>
+                        <p>We nurture promising AI startups, providing technology, mentorship, and strategic partnerships to accelerate the next generation of AI innovation.</p>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <img src="assets/images/LivingStoneFoundationLOGONoBackground.png" alt="Living Stone Foundation Logo" class="about-logo">
+                    <div class="value-props">
+                        <div class="value-prop">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure & Private</span>
+                        </div>
+                        <div class="value-prop">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Seamless Integration</span>
+                        </div>
+                        <div class="value-prop">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Measurable ROI</span>
+                        </div>
+                        <div class="value-prop">
+                            <i class="fas fa-users"></i>
+                            <span>Strategic Partnership</span>
                         </div>
                     </div>
-                    <div class="hero-image">
-                        <img src="assets/images/LivingStoneFoundationLOGONoBackground.png" alt="AI Solutions" class="floating-element">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">
+                    Comprehensive AI solutions tailored to transform your business operations and drive sustainable growth.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Business Personal LLM Solutions</h3>
+                    <p>Custom LLM development and fine-tuning using your proprietary data, creating highly specialized AI assistants that understand your business context and communication style.</p>
+                    <ul class="service-features">
+                        <li>Custom LLM Development & Fine-tuning</li>
+                        <li>Secure & Private LLM Deployment</li>
+                        <li>Personalized AI Agents</li>
+                        <li>LLM Integration Services</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Intelligent Automation Services</h3>
+                    <p>Advanced AI-powered automation that goes beyond traditional RPA, handling complex processes with cognitive capabilities and intelligent decision-making.</p>
+                    <ul class="service-features">
+                        <li>Intelligent Process Automation (IPA)</li>
+                        <li>AI-Powered Workflow Automation</li>
+                        <li>RPA with AI Enhancement</li>
+                        <li>Custom Automation Agents</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software Development & AI Integration</h3>
+                    <p>End-to-end software development services focused on seamless AI integration, from custom applications to MLOps implementation and data strategy.</p>
+                    <ul class="service-features">
+                        <li>Custom AI Application Development</li>
+                        <li>AI Model Deployment & MLOps</li>
+                        <li>Data Strategy & Engineering</li>
+                        <li>API Development for AI Services</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>AI Agent Development</h3>
+                    <p>Specialized AI agents designed for specific business roles and departments, built on our proprietary framework for maximum efficiency and performance.</p>
+                    <ul class="service-features">
+                        <li>Proprietary AI Agent Framework</li>
+                        <li>Client-Specific Agent Creation</li>
+                        <li>Performance Monitoring & Optimization</li>
+                        <li>Multi-Agent System Integration</li>
+                    </ul>
+                    <a href="#contact" class="service-cta">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Industry Solutions</h2>
+                <p class="section-subtitle">
+                    Discover how our AI solutions transform businesses across various industries with measurable results and sustainable growth.
+                </p>
+            </div>
+            <div class="solutions-content">
+                <div class="solution-tabs">
+                    <button class="tab-btn active" data-tab="finance">Financial Services</button>
+                    <button class="tab-btn" data-tab="healthcare">Healthcare</button>
+                    <button class="tab-btn" data-tab="retail">Retail & E-commerce</button>
+                    <button class="tab-btn" data-tab="manufacturing">Manufacturing</button>
+                </div>
+                
+                <div class="tab-content active" id="finance">
+                    <div class="solution-showcase">
+                        <div class="solution-text">
+                            <h3>Financial Services Transformation</h3>
+                            <p>Revolutionize financial operations with AI-powered automation for payroll, invoicing, bookkeeping, and risk assessment. Our solutions ensure compliance while reducing processing time by up to 80%.</p>
+                            <div class="solution-benefits">
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Automated Financial Reporting</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Intelligent Fraud Detection</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Regulatory Compliance Automation</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Customer Risk Assessment</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solution-visual">
+                            <div class="metrics-dashboard">
+                                <div class="metric">
+                                    <div class="metric-value">80%</div>
+                                    <div class="metric-label">Processing Time Reduction</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">99.9%</div>
+                                    <div class="metric-label">Accuracy Rate</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">$2M</div>
+                                    <div class="metric-label">Annual Savings</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="statistics-section">
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
-                        <p class="stat-label">AI Models Deployed</p>
+                
+                <div class="tab-content" id="healthcare">
+                    <div class="solution-showcase">
+                        <div class="solution-text">
+                            <h3>Healthcare Innovation</h3>
+                            <p>Enhance patient care and operational efficiency with AI solutions for medical documentation, appointment scheduling, and patient communication while maintaining HIPAA compliance.</p>
+                            <div class="solution-benefits">
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Automated Medical Documentation</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Intelligent Patient Scheduling</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Clinical Decision Support</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Patient Communication Automation</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solution-visual">
+                            <div class="metrics-dashboard">
+                                <div class="metric">
+                                    <div class="metric-value">60%</div>
+                                    <div class="metric-label">Documentation Time Saved</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">95%</div>
+                                    <div class="metric-label">Patient Satisfaction</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">40%</div>
+                                    <div class="metric-label">Operational Efficiency Gain</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="95">0</span><span class="stat-percent">%</span>
-                        <p class="stat-label">Client Satisfaction</p>
+                </div>
+                
+                <div class="tab-content" id="retail">
+                    <div class="solution-showcase">
+                        <div class="solution-text">
+                            <h3>Retail & E-commerce Excellence</h3>
+                            <p>Transform customer experience and inventory management with AI-powered personalization, demand forecasting, and automated customer service solutions.</p>
+                            <div class="solution-benefits">
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Personalized Product Recommendations</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Intelligent Inventory Management</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Automated Customer Support</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Dynamic Pricing Optimization</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solution-visual">
+                            <div class="metrics-dashboard">
+                                <div class="metric">
+                                    <div class="metric-value">35%</div>
+                                    <div class="metric-label">Sales Increase</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">25%</div>
+                                    <div class="metric-label">Inventory Cost Reduction</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">90%</div>
+                                    <div class="metric-label">Customer Query Resolution</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-target="40">0</span><span class="stat-percent">%</span>
-                        <p class="stat-label">Average Cost Reduction</p>
+                </div>
+                
+                <div class="tab-content" id="manufacturing">
+                    <div class="solution-showcase">
+                        <div class="solution-text">
+                            <h3>Manufacturing Optimization</h3>
+                            <p>Optimize production processes with predictive maintenance, quality control automation, and supply chain intelligence powered by advanced AI algorithms.</p>
+                            <div class="solution-benefits">
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Predictive Maintenance</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Quality Control Automation</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Supply Chain Optimization</span>
+                                </div>
+                                <div class="benefit">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Production Planning Intelligence</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="solution-visual">
+                            <div class="metrics-dashboard">
+                                <div class="metric">
+                                    <div class="metric-value">45%</div>
+                                    <div class="metric-label">Downtime Reduction</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">30%</div>
+                                    <div class="metric-label">Quality Improvement</div>
+                                </div>
+                                <div class="metric">
+                                    <div class="metric-value">20%</div>
+                                    <div class="metric-label">Cost Savings</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="company-logos-section">
-            <div class="container">
-                <h2>Trusted by Leading Innovators</h2>
-                <div class="logo-carousel">
-                    <div class="logo-track">
-                        <img src="assets/images/Zapier.png" alt="Zapier">
-                        <img src="assets/images/StripeLogo.png" alt="Stripe">
-                        <img src="assets/images/GitHubLogo.png" alt="GitHub">
-                        <img src="assets/images/DockerLogo.png" alt="Docker">
-                        <img src="assets/images/FigmaLogo.png" alt="Figma">
-                        <img src="assets/images/AWSLogo.png" alt="AWS">
-                        <img src="assets/images/SlackLogo.png" alt="Slack">
-                        <img src="assets/images/NotionLogo.png" alt="Notion">
-                        <img src="assets/images/AirtableLogo.png" alt="Airtable">
-                        <img src="assets/images/MongoDBLogo.png" alt="MongoDB">
-                        <img src="assets/images/VercelLogo.png" alt="Vercel">
-                        <img src="assets/images/NetlifyLogo.png" alt="Netlify">
-                        <img src="assets/images/SalesforceLogo.png" alt="Salesforce">
-                        <img src="assets/images/HubSpotLogo.png" alt="HubSpot">
-                        <img src="assets/images/TwilioLogo.png" alt="Twilio">
-                        <img src="assets/images/sendgrid.jpg" alt="SendGrid">
-                        <img src="assets/images/chainlink-logo-png_seeklogo-396866.png" alt="Chainlink">
-                        <img src="assets/images/InfuraLogo.png" alt="Infura">
-                        <img src="assets/images/AlchemyLogo.jpg" alt="Alchemy">
-                        <img src="assets/images/n8nLogo.png" alt="n8n">
+    <!-- Technology Section -->
+    <section class="technology">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Technology Advantage</h2>
+                <p class="section-subtitle">
+                    Built on cutting-edge AI technologies with enterprise-grade security and seamless integration capabilities.
+                </p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-lock"></i>
                     </div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-level encryption, on-premise deployment options, and comprehensive data governance ensure your sensitive information remains protected.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Seamless Integration</h3>
+                    <p>Our solutions integrate effortlessly with existing CRM, ERP, and business applications through robust APIs and custom connectors.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Performance Analytics</h3>
+                    <p>Real-time monitoring, performance metrics, and continuous optimization ensure maximum ROI from your AI investments.</p>
+                </div>
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-expand-arrows-alt"></i>
+                    </div>
+                    <h3>Scalable Architecture</h3>
+                    <p>Cloud-native design with auto-scaling capabilities ensures your AI solutions grow with your business needs.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="services-overview-section">
-            <div class="container">
-                <h2>Our Core Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3>Business Personal LLM</h3>
-                        <p>Develop and deploy custom Large Language Models tailored to your business data and needs for enhanced internal operations.</p>
-                        <a href="services.html#personal-llm" class="btn btn-secondary">Learn More</a>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Ready to Transform Your Business?</h2>
+                    <p>Let's discuss how The Living Stone Foundation can help you leverage AI to drive growth, efficiency, and innovation in your organization.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@thelivingstonefoundation.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (540) 998-9766</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Washington, DC</span>
+                        </div>
                     </div>
-                    <div class="service-card">
-                        <h3>Intelligent Automation</h3>
-                        <p>Automate complex workflows and repetitive tasks using advanced AI, freeing up your team for strategic initiatives.</p>
-                        <a href="services.html#automation" class="btn btn-secondary">Learn More</a>
-                    </div>
-                    <div class="service-card">
-                        <h3>AI Integration</h3>
-                        <p>Seamlessly integrate AI capabilities into your existing systems and applications, enhancing functionality and efficiency.</p>
-                        <a href="services.html#integration" class="btn btn-secondary">Learn More</a>
-                    </div>
-                    <div class="service-card">
-                        <h3>AI Agent Development</h3>
-                        <p>Create autonomous AI agents that can perform tasks, make decisions, and interact with other systems intelligently.</p>
-                        <a href="services.html#agent-dev" class="btn btn-secondary">Learn More</a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7343688705166995457" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Company Name">
+                        </div>
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Select Service Interest</option>
+                                <option value="llm">Business Personal LLM Solutions</option>
+                                <option value="automation">Intelligent Automation Services</option>
+                                <option value="development">Software Development & AI Integration</option>
+                                <option value="agents">AI Agent Development</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Tell us about your project or requirements" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                    </form>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section about">
-                    <img src="assets/images/Living_Stone_LOGO_with_Name-removebg-preview.png" alt="Living Stone Foundation Logo" class="footer-logo">
-                    <p>Driving innovation with custom AI agents, intelligent automation, and personalized LLM solutions for a smarter future.</p>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> info@thelivingstonefoundation.com</p>
-                        <p><i class="fas fa-phone"></i> +1 (540) 998-9766</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Washington, DC</p>
-                    </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/company/the-living-stone-foundation" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
+                <div class="footer-section">
+                    <img src="assets/images/Living_Stone_LOGO_with_Name-removebg-preview.png" alt="The Living Stone Foundation" class="footer-logo">
+                    <p>Transforming businesses through innovative AI solutions and fostering the next generation of AI startups.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="services.html#personal-llm">Business Personal LLM</a></li>
-                        <li><a href="services.html#automation">Intelligent Automation</a></li>
-                        <li><a href="services.html#integration">AI Integration</a></li>
-                        <li><a href="services.html#agent-dev">AI Agent Development</a></li>
+                        <li><a href="#services">Business Personal LLM</a></li>
+                        <li><a href="#services">Intelligent Automation</a></li>
+                        <li><a href="#services">AI Integration</a></li>
+                        <li><a href="#services">AI Agent Development</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="services.html">Solutions</a></li>
-                        <li><a href="contact-formspree.html">Contact</a></li>
-                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Blog</a></li>
                         <li><a href="#">Case Studies</a></li>
                         <li><a href="#">Documentation</a></li>
                         <li><a href="#">Support</a></li>
@@ -169,8 +705,8 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 The Living Stone Foundation. All rights reserved.</p>
                 <div class="footer-links">
-                    <a href="privacy-policy.html">Privacy Policy</a>
-                    <a href="terms-conditions.html">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
                 </div>
             </div>
         </div>
@@ -179,4 +715,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
