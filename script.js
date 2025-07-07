@@ -1,18 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Navigation Toggle
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (hamburgerMenu && navLinks) {
-        hamburgerMenu.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    }
-
-    // Statistics Counter Animation
-    const statNumbers = document.querySelectorAll('.stat-number');
-    
-    const animateCounter = (element) => {
+document.addEventListener('DOMContentLoaded', function() {
+    // Statistics counter animation
+    function animateCounter(element) {
         const target = parseInt(element.getAttribute('data-target'));
         const increment = target / 100;
         let current = 0;
@@ -28,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
         };
         
         updateCounter();
-    };
+    }
 
-    // Intersection Observer for Statistics
+    // Intersection Observer for statistics
     const observerOptions = {
         threshold: 0.5,
         rootMargin: '0px 0px -100px 0px'
@@ -48,11 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }, observerOptions);
 
-    // Observe statistics section
-    const statisticsSection = document.querySelector('.statistics-section');
-    if (statisticsSection) {
-        observer.observe(statisticsSection);
-    }
+    // Observe all stat items
+    document.querySelectorAll('.stat-item').forEach(item => {
+        observer.observe(item);
+    });
 
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -68,31 +55,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form submission handling (for enhanced UX)
+    // Form submission handling
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
-            const submitButton = form.querySelector('button[type="submit"]');
+            const submitButton = form.querySelector('button[type="submit"], input[type="submit"]');
             if (submitButton) {
+                const originalText = submitButton.textContent || submitButton.value;
+                submitButton.textContent = 'Sending...';
                 submitButton.disabled = true;
-                submitButton.textContent = 'Submitting...';
                 
                 // Re-enable button after 3 seconds (in case of issues)
                 setTimeout(() => {
                     submitButton.disabled = false;
-                    submitButton.textContent = submitButton.getAttribute('data-original-text') || 'Submit';
+                    submitButton.textContent = originalText;
                 }, 3000);
             }
         });
     });
 
-    // Store original button text
-    document.querySelectorAll('button[type="submit"]').forEach(button => {
-        button.setAttribute('data-original-text', button.textContent);
-    });
-
     // Add loading animation to buttons
-    document.querySelectorAll('.btn').forEach(button => {
+    document.querySelectorAll('.btn-primary, .btn-secondary, .cta-button, .apply-btn, .read-more').forEach(button => {
         button.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-2px)';
         });
@@ -108,9 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.classList.remove('lazy');
-                    imageObserver.unobserve(img);
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy');
+                        imageObserver.unobserve(img);
+                    }
                 }
             });
         });
@@ -119,4 +104,57 @@ document.addEventListener('DOMContentLoaded', () => {
             imageObserver.observe(img);
         });
     }
+
+    // Mobile menu toggle (if needed)
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Scroll progress indicator
+    const progressBar = document.createElement('div');
+    progressBar.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #667eea, #764ba2);
+        z-index: 9999;
+        transition: width 0.3s;
+    `;
+    document.body.appendChild(progressBar);
+
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset;
+        const docHeight = document.body.offsetHeight - window.innerHeight;
+        const scrollPercent = (scrollTop / docHeight) * 100;
+        progressBar.style.width = scrollPercent + '%';
+    });
+
+    // Animate elements on scroll
+    const animateOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    // Apply animation to cards and sections
+    document.querySelectorAll('.service-card, .tech-item, .blog-card, .job-card, .benefit-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        animateOnScroll.observe(el);
+    });
 });
+
